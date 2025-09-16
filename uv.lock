@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.11"
 
 [[package]]
@@ -69,6 +69,19 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/44/96/392abd49b094d30b91d9fbda6a69519e95802250b777841cf3bda8fe136c/charset_normalizer-3.4.2-cp313-cp313-win32.whl", hash = "sha256:aaeeb6a479c7667fbe1099af9617c83aaca22182d6cf8c53966491a0f1b7ffb7", size = 98064, upload-time = "2025-05-02T08:33:17.06Z" },
     { url = "https://files.pythonhosted.org/packages/e9/b0/0200da600134e001d91851ddc797809e2fe0ea72de90e09bec5a2fbdaccb/charset_normalizer-3.4.2-cp313-cp313-win_amd64.whl", hash = "sha256:aa6af9e7d59f9c12b33ae4e9450619cf2488e2bbe9b44030905877f0b2324980", size = 105641, upload-time = "2025-05-02T08:33:18.753Z" },
     { url = "https://files.pythonhosted.org/packages/20/94/c5790835a017658cbfabd07f3bfb549140c3ac458cfc196323996b10095a/charset_normalizer-3.4.2-py3-none-any.whl", hash = "sha256:7f56930ab0abd1c45cd15be65cc741c28b1c9a34876ce8c17a2fa107810c0af0", size = 52626, upload-time = "2025-05-02T08:34:40.053Z" },
+]
+
+[[package]]
+name = "google-alert"
+version = "0.1.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "orjson" },
+    { name = "pychromecast" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1d/6e/4fe2d791e4f4effe457a754b362a257bfaaeffbae8e3a715b03931203d15/google_alert-0.1.2.tar.gz", hash = "sha256:ae4f56c95ac03ce0e038c84c7caa2c544480e6c6f1373fb714ff3497123bfcdf", size = 29418, upload-time = "2025-09-15T23:14:57.854Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7a/fc/2c9d20c05521409194a2900916ca09b1b188d9d7497fca68de984380b0d6/google_alert-0.1.2-py3-none-any.whl", hash = "sha256:a1e16e22ffddfaf5f6bfd59779b3cd1a0fa9fd0f87b8d8041859cda60d147e50", size = 9822, upload-time = "2025-09-15T23:14:56.564Z" },
 ]
 
 [[package]]
@@ -233,6 +246,7 @@ name = "temp-sensor"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "google-alert" },
     { name = "orjson" },
     { name = "pip" },
     { name = "pychromecast" },
@@ -243,6 +257,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "google-alert", specifier = ">=0.1.2" },
     { name = "orjson", specifier = ">=3.10.18" },
     { name = "pip", specifier = ">=25.1.1" },
     { name = "pychromecast", specifier = ">=14.0.7" },

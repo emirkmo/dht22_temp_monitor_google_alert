@@ -5,6 +5,7 @@ description = "DHT22 temperature sensor monitoring and alerting code"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "google-alert>=0.1.2",
     "orjson>=3.10.18",
     "pip>=25.1.1",
     "pychromecast>=14.0.7",
